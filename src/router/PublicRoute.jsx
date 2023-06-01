@@ -4,11 +4,11 @@ import { Navigate } from 'react-router-dom';
 
 export const PublicRoute = ({ children }) => {
 
-  const { logged } = useContext( AuthContext );
+   const { logged } = useContext( AuthContext );
 
-  const lastPath = localStorage.getItem('lastPath') || '/marvel';
+   const lastPath = localStorage.getItem('lastPath') || '/marvel';
 
-  return (!logged)
-    ? children
-    : <Navigate to={lastPath}/>;
+   return (!logged)
+      ? children
+      : <Navigate to={lastPath}/>;
 };
